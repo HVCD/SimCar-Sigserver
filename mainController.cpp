@@ -106,7 +106,7 @@ void mainController::onInit(InitEvent &evt) {
 
 	strcat(file_name, dest);
 
-	outdata.open(file_name);	
+	outdata.open(file_name);
 	outdata << "x,z,r00,r02,v_l,v_r" << std::endl;
 	//iConnect = m_WC.connectWheel();
 }
