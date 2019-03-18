@@ -12,10 +12,6 @@
 #ifndef CARCONTROLLER_H
 #define CARCONTROLLER_H
 
-#include <iostream>
-#include <cstdlib>
-#include <cstdio>
-
 using namespace std;
 
 struct VELOCITY {
@@ -35,17 +31,4 @@ public:
 	VELOCITY getVelocity(float v, float w);
 };
 
-CarController::CarController(int wheelDis, int wheelRadius) {
-	m_wheelDis = wheelDis;
-	m_wheelRadius = wheelRadius;
-}
-
-VELOCITY CarController::getVelocity(float v, float w) {
-	VELOCITY vel;
-	cout << "--> " << v << ", " << w << endl;
-
-	vel.leftVel = v - w * m_wheelDis / 2;
-	vel.rightVel = v + w * m_wheelDis / 2;
-	return vel;
-}
 #endif

@@ -1,2 +1,2 @@
 sigkill.sh
-sigserver.sh -w ./WorldSample.xml
+sigserver.sh -w ./model/WorldSample.xml

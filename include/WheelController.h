@@ -13,7 +13,6 @@
 #define WHEEL_CONTROLLER_H
 
 #include "NetworkController.h"
-#include <iostream>
 
 struct VELOCITY {
 	float leftVel;
@@ -23,26 +22,8 @@ struct VELOCITY {
 class WheelController : public NetworkController {
 public:
 	WheelController();
-
 	int connectWheel();
 	VELOCITY getWheelVelocity();
 };
 
-WheelController::WheelController() {
-}
-
-int WheelController::connectWheel() {
-	initServer(9600);
-	std::cout << "Init Server..." << std::endl;
-	serverListen();
-	std::cout << "Server Listening..." << std::endl;
-	return 0;
-}
-
-VELOCITY WheelController::getWheelVelocity() {
-	VELOCITY vel;
-	serverRecv((char*)&vel, sizeof(struct VELOCITY));
-	std::cout << vel.leftVel << "  " << vel.rightVel << std::endl;
-	return vel;
-}
 #endif

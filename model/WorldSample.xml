@@ -339,7 +339,7 @@
     <set-attr-value name="name" value="h7car"/>
     <set-attr-value name="language" value="c++"/>
     <set-attr-value name="implementation"
-                    value="./mainController.so"/>
+                    value="./build/mainController.so"/>
     <set-attr-value name="dynamics" value="false"/>
     <set-attr-value name="x" value="1170"/>
     <set-attr-value name="y" value="38"/>
